@@ -1,21 +1,17 @@
-# StatusPage-UptimeRobot
+# UptimeRobot Status Page
 
-`StatusPage-UptimeRobot` is a simple flat PHP file that retrieve's [UptimeRobot](https://www.uptimerobot.com "Uptime Robot's Homepage")'s sensors via their API and turns it into a professional service status page .
+`UptimeRobot Status Page` is a simple html website that retrieve's [UptimeRobot](https://www.uptimerobot.com "Uptime Robot's Homepage")'s sensors via their API and turns it into a professional service status page .
 
   - Import's monitor data from UptimeRobot.
   - Extracts monitor IDs that are sorted into each category.
   - Reports current status and recent logs.
 
-This project is designed to be a drag-and-drop solution used in conjunction with a provider like [GitHub.io](https://pages.github.com/) to provide an easy, off-site solution for labs and small service clusters. 
-
-*Do not expect advanced features within this package due to the flat, one PHP file limitation!*
-
 ### Version
-1.0.2
+2.0
 
 ### Included Projects and Libraries
 
-`StatusPage-UptimeRobot` uses a number of projects:
+`UptimeRobot Status Page` uses a number of projects:
 
 * [Cachet.io](https://github.com/CachetHQ/Cachet) - An open source status page system for everyone.
 * [Jaco Strauss' Tech Support Excuse Generator](http://www.strauss.za.com/sla/support.asp) - IT excuses for downtime.
@@ -24,24 +20,21 @@ This project is designed to be a drag-and-drop solution used in conjunction with
 
 ### Installation
 
-`StatusPage-UptimeRobot` will run on any web-server that is capable of serving the HTML file. It is reccomended to host outside of your network for availability.
+`UptimeRobot Status Page` will run on any web-server that is capable of serving the HTML file. It is recommended to host outside of your network for availability.
 
-Save `status.php`:
-```
-https://raw.githubusercontent.com/kmain4/StatusPage-UptimeRobot/master/status.php
-````
+Save `this repo`
 
-Edit the configuration at the top of the file. 
+Edit the configuration at the top of the `js/main.js` file.
 
-Add your Monitors' IDs to the `categories` object on line `188`. You can find your Monitor IDs by clicking on them in the UptimeRobot website and looking at your URL. Also add your API Key.
+Add your Monitors' IDs to the `categories` object. You can find your Monitor IDs by clicking on them in the UptimeRobot website and looking at your URL.
+
+Also add your API Key. if you don't want the API-KEY to be Public I suggest using a JavaScript Obfuscator,
+
+I personally use: `http://javascriptobfuscator.herokuapp.com/`
 
 Example: `https://uptimerobot.com/dashboard.php#888246374` The ID for this Monitor is `888246374`.
 
-Head over to GitHub and create a new repository named `username.github.io`, where username is your username (or organization name) on GitHub. *If the first part of the repository doesn’t exactly match your username, it won’t work, so make sure to get it right!*
-
-Finally, simply push `status.php` to your repository and rename it to `index.php`.
-
-You can also use GitHub.io pages with custom domains like `status.constoso.com`. [Read more about it here.](https://help.github.com/articles/quick-start-setting-up-a-custom-domain/)
+Upload to Server and Done!
 
 
 ### Images
